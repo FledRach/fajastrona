@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Notatka: Znacznik &lt;marquee&gt;</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f8ff;
+            color: #222;
+            margin: 20px;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0066cc;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        .section {
+            background: #ffffff;
+            border-left: 8px solid #3399ff;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 900px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            color: #1a237e;
+            margin-top: 0;
+        }
+
+        p {
+            margin: 8px 0;
+        }
+
+        marquee {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;
+            font-size: 1.1em;
+        }
+
+        code {
+            background-color: #e3f2fd;
+            padding: 4px 6px;
+            border-radius: 5px;
+            font-family: Consolas, monospace;
+            color: #0d47a1;
+            display: inline-block;
+            margin-top: 6px;
+        }
+
+        /* Różne kolory tła dla marquee */
+        .red { background-color: #e53935; }
+        .blue { background-color: #1e88e5; }
+        .green { background-color: #43a047; }
+        .orange { background-color: #fb8c00; }
+        .purple { background-color: #8e24aa; }
+        .grey { background-color: #607d8b; }
+
+        .highlight {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+    <h1>📘 Notatka: Znacznik <code>&lt;marquee&gt;</code></h1>
+
+    <div class="section">
+        <h3>🔹 Podstawowy przykład</h3>
+        <code>&lt;marquee&gt;Kacper&lt;/marquee&gt;</code>
+        <marquee class="blue">Kacper</marquee>
+    </div>
+
+    <div class="section">
+        <h3>🔹 <code>behavior="scroll"</code></h3>
+        <p>Domyślne przewijanie od lewej do prawej.</p>
+        <code>&lt;marquee behavior="scroll"&gt;Kacper&lt;/marquee&gt;</code>
+        <marquee class="green" behavior="scroll">Kacper</marquee>
+    </div>
+
+    <div class="section">
+        <h3>🔹 <code>behavior="slide"</code></h3>
+        <p>Tekst przesuwa się i zatrzymuje na końcu.</p>
+        <code>&lt;marquee behavior="slide"&gt;Kacper&lt;/marquee&gt;</code>
+        <marquee class="orange" behavior="slide">Kacper</marquee>
+        <div class="highlight">📌 Użyteczne do pojedynczych komunikatów lub banerów.</div>
+    </div>
+
+    <div class="section">
+        <h3>🔹 <code>behavior="alternate"</code></h3>
+        <p>Tekst odbija się od krawędzi.</p>
+        <code>&lt;marquee behavior="alternate"&gt;Kacper&lt;/marquee&gt;</code>
+        <marquee class="purple" behavior="alternate">Kacper</marquee>
+    </div>
+
+    <div class="section">
+        <h3>🔹 <code>direction="left/right"</code></h3>
+        <p>Określa kierunek przewijania tekstu.</p>
+        <code>&lt;marquee direction="right"&gt;Kacper&lt;/marquee&gt;</code>
+        <marquee class="blue" direction="right">Kacper</marquee>
+        <code>&lt;marquee direction="left"&gt;Kacper&lt;/marquee&gt;</code>
+        <marquee class="blue" direction="left">Kacper</marquee>
+    </div>
+
+    <div class="section">
+        <h3>🔹 <code>bgcolor</code></h3>
+        <p>Ustawia kolor tła wewnątrz znacznika.</p>
+        <code>&lt;marquee bgcolor="red"&gt;Kacper&lt;/marquee&gt;</code>
+        <marquee class="red">Kacper</marquee>
+        <code>&lt;marquee bgcolor="#444444"&gt;Kacper&lt;/marquee&gt;</code>
+        <marquee class="grey">Kacper</marquee>
+    </div>
+
+    <div class="section">
+        <h3>🔹 <code>width</code> i <code>height</code></h3>
+        <p>Określają rozmiar obszaru przewijania.</p>
+        <code>&lt;marquee width="223"&gt;Kacper&lt;/marquee&gt;</code>
+        <marquee class="green" bgcolor="red" width="223">Kacper</marquee>
+        <code>&lt;marquee height="45"&gt;Kacper&lt;/marquee&gt;</code>
+        <marquee class="green" bgcolor="red" height="45">Kacper</marquee>
+    </div>
+
+    <div class="section">
+        <h3>🔹 <code>scrollamount</code></h3>
+        <p>Kontroluje szybkość przewijania tekstu.</p>
+        <code>&lt;marquee scrollamount="2"&gt;Kacper&lt;/marquee&gt;</code>
+        <marquee class="blue" scrollamount="2">Kacper</marquee>
+        <code>&lt;marquee scrollamount="4"&gt;Kacper&lt;/marquee&gt;</code>
+        <marquee class="blue" scrollamount="4">Kacper</marquee>
+        <code>&lt;marquee scrollamount="10"&gt;Kacper&lt;/marquee&gt;</code>
+        <marquee class="blue" scrollamount="10">Kacper</marquee>
+        <div class="highlight">⚡ Im wyższa wartość, tym szybszy ruch tekstu.</div>
+    </div>
+</body>
+</html>

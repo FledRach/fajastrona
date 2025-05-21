@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Notatka: Znacznik &lt;audio&gt;</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #e0f7fa;
+            color: #222;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00796b;
+            font-size: 2.4em;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            background-color: #ffffff;
+            border-left: 8px solid #0097a7;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 900px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            color: #004d40;
+        }
+
+        code {
+            background-color: #e0f2f1;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 8px;
+            font-family: Consolas, monospace;
+            color: #00695c;
+        }
+
+        .highlight {
+            background-color: #fff9c4;
+            border-left: 5px solid #fbc02d;
+            padding: 10px;
+            margin-top: 12px;
+            border-radius: 5px;
+            font-size: 0.95em;
+        }
+
+        audio {
+            margin: 10px 0;
+            width: 100%;
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔊 Notatka: Znacznik <code>&lt;audio&gt;</code></h1>
+
+    <div class="section">
+        <h3>🎧 Przykład z prawdziwym dźwiękiem</h3>
+        <p>Plik z darmową muzyką z domeny publicznej:</p>
+        <code>&lt;audio src="..." controls&gt;&lt;/audio&gt;</code>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Twoja przeglądarka nie obsługuje znacznika audio.
+        </audio>
+        <div class="highlight">🎵 Źródło: SoundHelix (darmowy przykład MP3)</div>
+    </div>
+
+    <div class="section">
+        <h3>🔹 Atrybuty znacznika <code>&lt;audio&gt;</code></h3>
+
+        <p><code>controls</code> – pokazuje kontrolki odtwarzacza</p>
+        <p><code>autoplay</code> – automatyczne odtwarzanie</p>
+        <p><code>loop</code> – odtwarzanie w pętli</p>
+        <p><code>preload="auto"</code> – ładowanie dźwięku z góry</p>
+
+        <code>&lt;audio src="..." controls autoplay loop preload="auto"&gt;&lt;/audio&gt;</code>
+        <audio controls autoplay loop preload="auto">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="section">
+        <h3>📂 Obsługiwane formaty</h3>
+        <ul>
+            <li><strong>.mp3</strong> – uniwersalny format dźwięku</li>
+            <li><strong>.wav</strong> – bezstratny, duży rozmiar</li>
+            <li><strong>.ogg</strong> – darmowy i lekki</li>
+        </ul>
+    </div>
+</body>
+</html>

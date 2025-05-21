@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Znacznik &lt;video&gt;</title>
+    <style>
+        body {
+            background-color: #e3f2fd;
+            font-family: 'Segoe UI', sans-serif;
+            color: #0d47a1;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1565c0;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            background: white;
+            border-left: 8px solid #42a5f5;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 900px;
+            border-radius: 12px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        code {
+            background: #e1f5fe;
+            padding: 4px 8px;
+            border-radius: 5px;
+            color: #0277bd;
+            font-family: Consolas, monospace;
+        }
+
+        dl dt {
+            font-weight: bold;
+            margin-top: 12px;
+            color: #01579b;
+        }
+
+        dl dd {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        iframe, video {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎥 Znacznik <code>&lt;video&gt;</code></h1>
+
+    <div class="section">
+        <p>W HTML5 możemy osadzać pliki wideo bezpośrednio na stronie za pomocą znacznika <code>&lt;video&gt;</code>. Obsługiwane formaty to: <strong>MP4</strong>, <strong>WebM</strong>, <strong>Ogg (.ogv)</strong>.</p>
+
+        <p>Przykład podstawowy:</p>
+        <code>&lt;video src="film.mp4" controls&gt;Tekst alternatywny&lt;/video&gt;</code>
+
+        <video src="newman.mp4" controls title="Film przykładowy">
+            Twoja przeglądarka nie obsługuje znacznika wideo.
+        </video>
+    </div>
+
+    <div class="section">
+        <h2>📘 Atrybuty znacznika <code>&lt;video&gt;</code></h2>
+        <dl>
+            <dt>&lt;video controls&gt;</dt>
+            <dd>Wyświetla kontrolki odtwarzacza</dd>
+
+            <dt>&lt;video autoplay&gt;</dt>
+            <dd>Automatyczne odtwarzanie filmu</dd>
+
+            <dt>&lt;video loop&gt;</dt>
+            <dd>Odtwarzanie wideo w pętli</dd>
+
+            <dt>&lt;video muted&gt;</dt>
+            <dd>Film domyślnie bez dźwięku</dd>
+
+            <dt>&lt;video poster="obrazek.jpg"&gt;</dt>
+            <dd>Ustawienie grafiki jako okładki filmu</dd>
+
+            <dt>&lt;video width="x" height="y"&gt;</dt>
+            <dd>Rozmiar bloku z filmem</dd>
+
+            <dt>&lt;source&gt;</dt>
+            <dd>Dodaje wiele źródeł wideo (dla różnych przeglądarek)</dd>
+        </dl>
+    </div>
+
+    <div class="section">
+        <h2>📂 Jak dodać film .ogv lub .ogg?</h2>
+        <p>Aby zapewnić kompatybilność z różnymi przeglądarkami, użyj kilku formatów filmów w znaczniku <code>&lt;video&gt;</code> z elementami <code>&lt;source&gt;</code>:</p>
+
+<pre><code>&lt;video controls width="640" height="360"&gt;
+    &lt;source src="film.mp4" type="video/mp4"&gt;
+    &lt;source src="film.ogv" type="video/ogg"&gt;
+    Twoja przeglądarka nie obsługuje wideo.
+&lt;/video&gt;</code></pre>
+
+        <p><strong>Uwaga:</strong> Rozszerzenie <code>.ogg</code> dla wideo ma formę <code>.ogv</code>, mimo że typ MIME to <code>video/ogg</code>.</p>
+    </div>
+
+    <video controls width="640" height="360">
+  <source src="ssss.mp4" type="video/mp4">
+  <source src="ssss.ogv" type="video/ogg">
+  Twoja przeglądarka nie obsługuje wideo.
+</video>
+
+
+        
+
+
+</body>
+</html>
